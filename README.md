@@ -1,7 +1,36 @@
 # Responsive Images
 
-Information, resources and sample implementations of responsive images in HTML and CSS in conjunction with [Cloudinary](https://cloudinary.com/).
+Information, resources and sample implementations of responsive images in HTML and CSS in conjunction with [Cloudinary](https://cloudinary.com/) for art direction.
 
+## Documentation
+
+**Introduction**
+
+Introduction to responsive images on the Web.
+
+* https://html.spec.whatwg.org/multipage/images.html#images
+* https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+
+
+**Web Standards**
+
+Web Standards that relate to responsive images on the Web.
+
+* https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element
+* https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element
+* https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element
+* https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element
+
+
+**Cloudinary**
+
+Links to parts of the Cloudinary documentation, which are used in this repository.
+
+* https://cloudinary.com/documentation/image_transformations
+* 
+
+
+***
 
 ## Mirrors
 
