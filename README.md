@@ -2,10 +2,9 @@
 
 Information, resources and sample implementations of responsive images in HTML and CSS in conjunction with [Cloudinary](https://cloudinary.com/) for art direction.
 
-There are two primary ways to display images on websites: 
+There are two primary ways to display images on websites: In HTML (e.g. `img` element) and in CSS (e.g. `background-image`). This repository covers both ways.
 
-* HTML (e.g. `img` element)
-* CSS (e.g. `background-image`)
+Examples of different usages of responsive images can be found in `/examples`.
 
 ## Terminologies
 
@@ -19,6 +18,8 @@ There are two primary ways to display images on websites:
 | Macbook Pro | 2 |
 | Samsung Galaxy S8+ | 4 |
 
+* **intrinsic width**  
+  The real size of an image
 
 ## Documentation
 
