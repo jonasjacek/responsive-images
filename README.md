@@ -23,16 +23,21 @@ CSS Pixels = Hardware Pixels / Pixel density
 
 ## Documentation
 
-**Introduction**
+### Introduction
 
 Introduction to responsive images on the Web.
 
 * https://html.spec.whatwg.org/multipage/images.html#images
 * https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+
+### Prerequisites
+
+It is crucial to understand some the following concepts.
+
 * https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 
-
-**Web Standards**
+### Web Standards
 
 Web Standards that relate to responsive images on the Web.
 
@@ -42,14 +47,16 @@ Web Standards that relate to responsive images on the Web.
 * https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element
 
 
-**Cloudinary**
+### Cloudinary
 
 Links to some parts of the Cloudinary documentation, which describe techniques used in this repository.
 
 * https://cloudinary.com/documentation/image_transformations
 * https://cloudinary.com/documentation/image_transformation_reference#crop_parameter
 
-**General**
+### General
+
+Useful resources.
 
 * https://caniuse.com/
 
