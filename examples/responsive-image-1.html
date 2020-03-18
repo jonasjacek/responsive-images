@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <h1>Responsive Image - 1</h1>
+    <p>This responsive image uses a <code>srcset</code> with 3 different sources and reacts to viewport width.</p>
+    <figure>
+      <picture>
+        <img 
+          srcset="
+            https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png 100w,
+            https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_150/circle_0_oqxmu3.png 150w,
+            https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 600w"
+          sizes="
+            (max-width: 250px) 100px, (max-width: 350px) 150px, (min-width: 450px) 600px"
+          src="
+            https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_600/circle_0_oqxmu3.png" alt="{{asset.alt}}"
+        >
+      </picture>
+    </figure>
+    <hr>
+    <h2>sizes</h2>
+    <p>The user agent will pick a width from the sizes attribute, using the first item with a <code>&lt;media-condition&gt;</code> (the part in parentheses) that evaluates to true, or using the last item (max-width: 450px) if they all evaluate to false.</p>
+    <h2>Fallback</h2>
+    <p>Browsers which do not support the <code>srcset</code> attribute will ignore it. Instead, they will load the image referenced in the <code>src</code> attribute.</p>
+    <p>Support can be looked up at <a href="https://caniuse.com/srcset">https://caniuse.com/srcset</a>.</p>
+  </body>
+</html>
