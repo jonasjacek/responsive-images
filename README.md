@@ -9,14 +9,13 @@ There are two primary ways to display images on websites:
 
 ## Terminologies
 
-### CSS Pixels
-
-CSS Pixels are hardware pixels divided by pixel density:
-
-CSS Pixels = Hardware Pixels / Pixel density
+* **CSS Pixels**  
+  CSS Pixels are hardware pixels divided by pixel density:  
+  CSS Pixels = Hardware Pixels / Pixel density
 
 | Product | Pixel density |
 | ------ | ------ |
+| My first computer | 1 |
 | Macbook Pro | 2 |
 | Samsung Galaxy S8+ | 4 |
 
@@ -25,42 +24,39 @@ CSS Pixels = Hardware Pixels / Pixel density
 
 ### Introduction
 
-Introduction to responsive images on the Web.
+Introductions to responsive images on the Web:
 
 * https://html.spec.whatwg.org/multipage/images.html#images
 * https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ### Prerequisites
 
-It is crucial to understand some the following concepts.
+The following concepts should be understood:
 
 * https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 * https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 
 ### Web Standards
 
-Web Standards that relate to responsive images on the Web.
+Web Standards that relate to responsive images on the Web:
 
 * https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element
 * https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element
 * https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element
 * https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element
 
-
 ### Cloudinary
 
-Links to some parts of the Cloudinary documentation, which describe techniques used in this repository.
+Links to the Cloudinary documentation, which describe techniques used in this repository:
 
 * https://cloudinary.com/documentation/image_transformations
 * https://cloudinary.com/documentation/image_transformation_reference#crop_parameter
 
 ### General
 
-Useful resources.
+Links to useful resources:
 
 * https://caniuse.com/
-
-***
 
 ## Mirrors
 
@@ -69,8 +65,6 @@ You can find this repository at:
   [https://gitlab.com/jonasjacek/responsive-images](https://gitlab.com/jonasjacek/responsive-images)
 * GitHub  
   [https://github.com/jonasjacek/responsive-images](https://github.com/jonasjacek/responsive-images)
-
-***
 
 ## Warranty and Liability
 [Responsive Images](https://gitlab.com/jonasjacek/responsive-images) is a small, private project. The author makes absolutely no claims and representations to warranties regarding the accuracy or completeness of the information provided. However, you can use the information in this repository AT YOUR OWN RISK.
