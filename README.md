@@ -27,7 +27,7 @@ Examples of different usages of responsive images can be found in `/examples`.
 * **Intrinsic width**  
   The real size of an image.
 * **Physical pixel**  
-  See _Hardware pixe_.
+  See _Hardware pixel_.
 * **Pixel density**  
   The number of pixels present per inch on a display. The density is measured in Pixels Per Inch (PPI).
 * **Resolution switching**  
