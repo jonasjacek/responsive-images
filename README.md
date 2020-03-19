@@ -16,22 +16,15 @@ Examples of different usages of responsive images can be found in `/examples`.
 
 ## Terminologies
 
-* Art direction  
+* **Art direction**  
   Images in the `srcset` show different images suitable for different space allocations.
-* Resolution switching  
-  All images in the `srcset` show the same thing but contain different numbers of pixels.
 * **CSS Pixels**  
-  CSS Pixels are hardware pixels divided by pixel density:  
-  CSS Pixels = Hardware Pixels / Pixel density
-
-| Product | Pixel density |
-| ------ | ------ |
-| My first computer | 1 |
-| Macbook Pro | 2 |
-| Samsung Galaxy S8+ | 4 |
-
-* **intrinsic width**  
+  CSS Pixels are hardware pixels divided by pixel density.
+* **Intrinsic width**  
   The real size of an image
+* **Resolution switching**  
+  All images in the `srcset` show the same thing but contain different numbers of pixels.
+
 
 ## Documentation
 
