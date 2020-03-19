@@ -1,13 +1,25 @@
 # Responsive Images
 
-Information, resources and sample implementations of responsive images in HTML and CSS in conjunction with [Cloudinary](https://cloudinary.com/) for art direction.
+**Information, resources and sample implementations of responsive images in HTML and CSS in conjunction with [Cloudinary](https://cloudinary.com/) for art direction.**
 
-There are two primary ways to display images on websites: In HTML (e.g. `img` element) and in CSS (e.g. `background-image`). This repository covers both.
+## Introduction
+
+### Responsive images in HTML
+
+Responsive images in HTML are a method for providing the browser with multiple image sources in the `img` element's `srcset` attribute. The browser picks an image, depending on display density, size of the image element in the page, or any number of other factors.
+
+### Responsive images in CSS
+
+Responsive images in CSS can be implemented with the help of media queries (`@media` and `@import`).
 
 Examples of different usages of responsive images can be found in `/examples`.
 
 ## Terminologies
 
+* Art direction  
+  Images in the `srcset` show different images suitable for different space allocations.
+* Resolution switching  
+  All images in the `srcset` show the same thing but contain different numbers of pixels.
 * **CSS Pixels**  
   CSS Pixels are hardware pixels divided by pixel density:  
   CSS Pixels = Hardware Pixels / Pixel density
@@ -73,6 +85,9 @@ You can find this repository at:
 ## License
 
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Responsive Images</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://gitlab.com/jonasjacek/responsive-images" property="cc:attributionName" rel="cc:attributionURL">Jonas Jacek</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Permissions beyond the scope of this license may be available upon <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.jonas.me/contact" rel="cc:morePermissions">request</a>.
+
+Atomic size parts of contents were taken from the [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web), which is written by Mozilla Contributors. These contents are also licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike (CC-BY-SA)](https://creativecommons.org/licenses/by-sa/4.0). 
+
 
 ## Contribute
 
