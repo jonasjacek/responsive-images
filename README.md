@@ -18,12 +18,22 @@ Examples of different usages of responsive images can be found in `/examples`.
 
 * **Art direction**  
   Images in the `srcset` show different images suitable for different space allocations.
-* **CSS Pixels**  
-  CSS Pixels are hardware pixels divided by pixel density.
+* **CSS Pixel**  
+  A measurement unit. CSS pixels are hardware pixels divided by pixel density.
+* **Device pixel ratio (DPR)**  
+  Ratio between hardware pixels and logical pixels.
+* **Hardware pixel**  
+  An individual dot of light in the display.
 * **Intrinsic width**  
-  The real size of an image
+  The real size of an image.
+* **Physical pixel**  
+  See _Hardware pixe_.
+* **Pixel density**  
+  The number of pixels present per inch on a display. The density is measured in Pixels Per Inch (PPI).
 * **Resolution switching**  
   All images in the `srcset` show the same thing but contain different numbers of pixels.
+* **Software pixel**  
+  See _CSS pixel_.
 
 
 ## Documentation
@@ -63,6 +73,7 @@ Links to the Cloudinary documentation, which describe techniques used in this re
 Links to useful resources:
 
 * https://caniuse.com/
+* https://en.wikipedia.org/wiki/Pixel_density
 
 ## Mirrors
 
