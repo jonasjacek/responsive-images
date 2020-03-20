@@ -40,7 +40,7 @@ The following selection methods are available:
 
 ### Device-pixel-ratio-based selection
 
-Resolution switching for displaying an image with a fixed size while supporting different screen resolutions.
+**Resolution switching for displaying an image with a fixed size while supporting different screen resolutions.**
 
 The `img` element's `sizes` and `srcset` attributes are used in conjunction with the `x` descriptor.
 
@@ -51,7 +51,7 @@ Browsers which do not support the `sizes` and `srcset` attributes will ignore th
 
 ### Viewport-based selection
 
-Resolution switching for displaying different sizes of an image.
+**Resolution switching for displaying different sizes of an image.**
 
 The `img` element's `sizes` and `srcset` attributes are used in conjunction with the `w` descriptor. 
 
@@ -62,9 +62,9 @@ Browsers which do not support the `sizes` and `srcset` attributes will ignore th
 
 ### Art direction-based selection
 
-Resolution switching for displaying different image sizes and contents.
+**Resolution switching for displaying different image sizes and contents.**
 
-The `picture` wrapper element wraps different `source` elements whose `media` and `srcset` attributes are used to provide different sources for images for the browser to choose from. 
+The `picture` elements `source` element's `media` and `srcset` attributes reference different image sources for the browser to choose from. 
 
 The images may not only vary in their size but also image content may not be identical.
 
