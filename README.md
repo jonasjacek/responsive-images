@@ -10,12 +10,11 @@
 
 * [Responsive images in HTML](#responsive-images-in-html)
   * [Device-pixel-ratio-based selection](#device-pixel-ratio-based-selection)
-    * [Examples](#examples)
   * [Viewport-based selection](#viewport-based-selection)
   * [Art direction-based selection](#art-direction-based-selection)
 * [Responsive images in CSS](#responsive-images-in-css)
 * [Terminologies](#terminologies)
-* [Examples](#examples-1)
+* [Examples](#examples)
 * [Documentation](#documentation)
   * [Introduction](#introduction)
   * [Prerequisites](#prerequisites)
@@ -54,15 +53,10 @@ Use this selection method if the rendered size of the image is fixed (e.g. by `h
     https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_150/circle_0_oqxmu3.png 1.5x, 
     https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 2x"
 ```
+See this example: [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html)(github.io), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/device-pixel-ratio-based-selection_1.html)(gitlab.com)
 
 Fallback: Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
-#### Examples
-
-* **Rendered:**  
-  https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html
-* **Source:**  
-  https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/device-pixel-ratio-based-selection_1.html
 
 
 ### Viewport-based selection
