@@ -18,7 +18,7 @@ Examples of different usages of responsive images can be found in `/examples`.
 
 * **Art direction**  
   Images in the `srcset` show different images suitable for different space allocations.
-* **CSS Pixel**  
+* **CSS pixel**  
   A measurement unit. CSS pixels are hardware pixels divided by pixel density.
 * **Device pixel ratio (DPR)**  
   Ratio between hardware pixels and logical pixels.
