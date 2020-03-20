@@ -81,9 +81,9 @@ The images only vary in their size (image content is identical).
   srcset="
     https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg 200w, 
     https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 400w, 
-    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_800/circle_0_saqntd.jpg 800w">
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_800/circle_0_saqntd.jpg 800w"
   src="
-    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg"
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg">
 ```
 
 **See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/viewport-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/viewport-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/viewport-based-selection_1.html) (gitlab.com)
