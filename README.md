@@ -2,6 +2,7 @@
 
 **Information, resources and sample implementations of responsive images in HTML and CSS in conjunction with [Cloudinary](https://cloudinary.com/) for art direction.**
 
+
 ## Introduction
 
 ### Responsive images in HTML
@@ -99,6 +100,8 @@ You can find this repository at:
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Responsive Images</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://gitlab.com/jonasjacek/responsive-images" property="cc:attributionName" rel="cc:attributionURL">Jonas Jacek</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Permissions beyond the scope of this license may be available upon <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.jonas.me/contact" rel="cc:morePermissions">request</a>.
 
 Atomic size parts of contents were taken from the [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web), which is written by Mozilla Contributors. These contents are also licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike (CC-BY-SA)](https://creativecommons.org/licenses/by-sa/4.0). 
+
+The [bullseye icon](https://commons.wikimedia.org/wiki/File:IPA_Unicode_0x0298.svg) was created by [Martin Kozák](https://commons.wikimedia.org/wiki/User:Martin_Koz%C3%A1k), who released the work into the [public domain](https://en.wikipedia.org/wiki/en:public_domain).
 
 
 ## Contribute
