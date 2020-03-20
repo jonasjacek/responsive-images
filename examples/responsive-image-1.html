@@ -6,7 +6,37 @@
   </head>
   <body>
     <h1>Responsive Image - 1</h1>
-    <p>This responsive image uses a <code>srcset</code> with 3 different sources and reacts to viewport width.</p>
+    <h2>Characteristics</h2>
+    <p>Responsive image in HTML.</p>
+    <table>
+      <tr>
+        <th>attribute</th>
+        <th>value</th>
+      </tr>
+      <tr>
+        <td>elements in <code>srcset</code>:</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>art direction:</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>caption:</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>reacts to:</td>
+        <td>viewport width (<code>w</code>)</td>
+      </tr>
+    </table>
+
+    <hr>
+
     <figure>
       <picture>
         <img 
@@ -21,11 +51,9 @@
         >
       </picture>
     </figure>
+
     <hr>
-    <h2>sizes</h2>
-    <p>The user agent will pick a width from the sizes attribute, using the first item with a <code>&lt;media-condition&gt;</code> (the part in parentheses) that evaluates to true, or using the last item (max-width: 450px) if they all evaluate to false.</p>
-    <h2>Fallback</h2>
-    <p>Browsers which do not support the <code>srcset</code> attribute will ignore it. Instead, they will load the image referenced in the <code>src</code> attribute.</p>
-    <p>Support can be looked up at <a href="https://caniuse.com/srcset">https://caniuse.com/srcset</a>.</p>
+    <h2><code>sizes</code></h2>
+    <p>The user agent will pick a width from the sizes attribute, using the first item with a <code>&lt;media-condition&gt;</code> (the part in parentheses) that evaluates to true, or use <code>max-width: 450px</code> if they all evaluate to false.</p>
   </body>
 </html>
