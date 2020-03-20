@@ -10,7 +10,9 @@
 
 * [Responsive images in HTML](#responsive-images-in-html)
   * [Device-pixel-ratio-based selection](#device-pixel-ratio-based-selection)
+    * [Example 1](#example-1)
   * [Viewport-based selection](#viewport-based-selection)
+    * [Example 1](#example-1-1)
   * [Art direction-based selection](#art-direction-based-selection)
 * [Responsive images in CSS](#responsive-images-in-css)
 * [Terminologies](#terminologies)
@@ -44,14 +46,16 @@ The `img` element's `sizes` and `srcset` attributes are used in conjunction with
 
 Use this selection method if the rendered size of the image is fixed (e.g. by `height` and `width` attributes on the `img` element. The images in `srcset` only vary in their intrinsic width to support different resolutions (image content is identical). This allows for sharp images on high resolution screens.
 
+#### Example 1
+
 ```html
 <img 
-  alt="bullseye" width="100" height="100"
+  alt="bullseye" height="200" width="200"
   src="
-    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png"
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg"
   srcset="
-    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_150/circle_0_oqxmu3.png 1.5x, 
-    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 2x">
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_300/circle_0_saqntd.jpg 1.5x, 
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 2x">
 ```
 
 **See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/device-pixel-ratio-based-selection_1.html) (gitlab.com)
@@ -67,6 +71,22 @@ Fallback: Browsers which do not support `sizes` and `srcset` attributes will ign
 The `img` element's `sizes` and `srcset` attributes are used in conjunction with the `w` descriptor. 
 
 The images only vary in their size (image content is identical).
+
+#### Example 1
+
+```html
+<img 
+  alt="bullseye"
+  sizes="100vw" 
+  srcset="
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg 200w, 
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 400w, 
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_800/circle_0_saqntd.jpg 800w">
+  src="
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg"
+```
+
+**See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/viewport-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/viewport-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/viewport-based-selection_1.html) (gitlab.com)
 
 Fallback: Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
