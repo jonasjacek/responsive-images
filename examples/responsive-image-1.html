@@ -1,8 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Test</title>
+    <title>Responsive Image - 1</title>
     <meta name="viewport" content="width=device-width">
+    <style>
+      figure {
+        border: 1px dotted blue;
+        display: table;
+        margin: 0;
+      }
+      picture {
+        border: 1px dotted red;
+      }
+      img {
+        border: 1px dotted black;
+        max-width: 100vw;
+      }
+      figcaption {
+        background-color: beige;
+        caption-side: bottom;
+        color: black;
+        display: table-caption;
+        font-size: .6em;
+        line-height: 1.2em;
+      }
+    </style>
   </head>
   <body>
     <h1>Responsive Image - 1</h1>
@@ -18,6 +40,10 @@
         <td>3</td>
       </tr>
       <tr>
+        <td>file type:</td>
+        <td>transparent .png</td>
+      </tr>
+      <tr>
         <td>art direction:</td>
         <td>no</td>
       </tr>
@@ -26,12 +52,12 @@
         <td>no</td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
         <td>reacts to:</td>
         <td>viewport width (<code>w</code>)</td>
+      </tr>
+      <tr>
+        <td>breakpoints:</td>
+        <td>250px, 350px, 450px</td>
       </tr>
     </table>
 
@@ -41,17 +67,17 @@
       <picture>
         <img 
           srcset="
-            https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png 100w,
-            https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_150/circle_0_oqxmu3.png 150w,
-            https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 600w"
+          https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png 100w,
+          https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_150/circle_0_oqxmu3.png 150w,
+          https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 600w"
           sizes="
-            (max-width: 250px) 100px, (max-width: 350px) 150px, (min-width: 450px) 600px"
+          (max-width: 250px) 100px, (max-width: 350px) 150px, (min-width: 450px) 600px"
           src="
-            https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_600/circle_0_oqxmu3.png" alt="{{asset.alt}}"
-        >
+          https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_600/circle_0_oqxmu3.png" alt="{{asset.alt}}"
+                                                                                                              >
       </picture>
+        <figcaption>I am a caption which does not exceed the image width.</figcaption>
     </figure>
-
     <hr>
     <h2><code>sizes</code></h2>
     <p>The user agent will pick a width from the sizes attribute, using the first item with a <code>&lt;media-condition&gt;</code> (the part in parentheses) that evaluates to true, or use <code>max-width: 450px</code> if they all evaluate to false.</p>
