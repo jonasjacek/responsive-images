@@ -47,24 +47,22 @@ Use this selection method if the rendered size of the image is fixed (e.g. by `h
 
 ```html
 <img 
+  alt="bullseye" width="100" height="100">
   src="
     https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png"
   srcset="
     https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_150/circle_0_oqxmu3.png 1.5x, 
     https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 2x"
-  alt="#" 
-  width="100" 
-  height="100"
->
 ```
 
-Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
+Fallback: Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
 #### Examples
 
-* Example 1  
-  Rendered: https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html
-  Source: https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/device-pixel-ratio-based-selection_1.html
+* **Rendered:**  
+  https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html
+* **Source:**  
+  https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/device-pixel-ratio-based-selection_1.html
 
 
 ### Viewport-based selection
@@ -75,7 +73,7 @@ The `img` element's `sizes` and `srcset` attributes are used in conjunction with
 
 The images only vary in their size (image content is identical).
 
-Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
+Fallback: Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
 
 ### Art direction-based selection
@@ -86,7 +84,7 @@ The `picture` elements `source` element's `media` and `srcset` attributes refere
 
 The images may not only vary in their size but also image content may not be identical.
 
-Browsers which do not support `picture` and `source` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
+Fallback: Browsers which do not support `picture` and `source` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
 
 
 ## Responsive images in CSS
