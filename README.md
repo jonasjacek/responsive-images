@@ -46,14 +46,15 @@ Use this selection method if the rendered size of the image is fixed (e.g. by `h
 
 ```html
 <img 
-  alt="bullseye" width="100" height="100">
+  alt="bullseye" width="100" height="100"
   src="
     https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png"
   srcset="
     https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_150/circle_0_oqxmu3.png 1.5x, 
-    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 2x"
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 2x">
 ```
-See this example: [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html)(github.io), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/device-pixel-ratio-based-selection_1.html)(gitlab.com)
+
+**See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html) (github.io), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/device-pixel-ratio-based-selection_1.html) (gitlab.com)
 
 Fallback: Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
