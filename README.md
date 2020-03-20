@@ -15,8 +15,6 @@
     * [Example 1](#example-1-1)
   * [Art direction-based selection](#art-direction-based-selection)
 * [Responsive images in CSS](#responsive-images-in-css)
-* [Terminologies](#terminologies)
-* [Examples](#examples)
 * [Documentation](#documentation)
   * [Introduction](#introduction)
   * [Prerequisites](#prerequisites)
@@ -24,6 +22,7 @@
   * [Browser Support](#browser-support)
   * [Cloudinary](#cloudinary)
   * [General](#general)
+  * [Terminologies](#terminologies)
 * [Mirrors](#mirrors)
 * [Warranty and Liability](#warranty-and-liability)
 * [Licenses](#licenses)
@@ -111,32 +110,6 @@ Browsers which do not support `@media` will ignore the rules.
 
 ---
 
-## Terminologies
-
-* **Art direction**  
-  Images in the `srcset` show different images suitable for different space allocations.
-* **CSS pixel**  
-  A measurement unit. CSS pixels are hardware pixels divided by pixel density.
-* **Device pixel ratio (DPR)**  
-  Ratio between hardware pixels and logical pixels.
-* **Hardware pixel**  
-  An individual dot of light in the display.
-* **Intrinsic width**  
-  The real size of an image.
-* **Physical pixel**  
-  See _Hardware pixel_.
-* **Pixel density**  
-  The number of pixels present per inch on a display. The density is measured in Pixels Per Inch (PPI).
-* **Resolution switching**  
-  All images in the `srcset` show the same thing but contain different numbers of pixels.
-* **Software pixel**  
-  See _CSS pixel_.
-
-
-## Examples
-
-Examples of different usages of responsive images can be found in `/examples`.
-
 
 ## Documentation
 
@@ -182,6 +155,28 @@ Links to useful resources:
 
 * https://caniuse.com/
 * https://en.wikipedia.org/wiki/Pixel_density
+
+
+### Terminologies
+
+* **Art direction**  
+  Images in the `srcset` show different images suitable for different space allocations.
+* **CSS pixel**  
+  A measurement unit. CSS pixels are hardware pixels divided by pixel density.
+* **Device pixel ratio (DPR)**  
+  Ratio between hardware pixels and logical pixels.
+* **Hardware pixel**  
+  An individual dot of light in the display.
+* **Intrinsic width**  
+  The real size of an image.
+* **Physical pixel**  
+  See _Hardware pixel_.
+* **Pixel density**  
+  The number of pixels present per inch on a display. The density is measured in Pixels Per Inch (PPI).
+* **Resolution switching**  
+  All images in the `srcset` show the same thing but contain different numbers of pixels.
+* **Software pixel**  
+  See _CSS pixel_.
 
 ## Mirrors
 
