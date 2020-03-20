@@ -11,8 +11,11 @@
         margin: 0;
       }
       h1 {
-        font-size: 20px;
-        margin: 2em .5rem;
+        font-size: 2.4em;
+        margin: 2rem .5rem;
+      }
+      h2 {
+        margin: 1.4rem .5rem;
       }
       p {
         margin: 1em .5rem; 
@@ -29,14 +32,16 @@
     </style>
   </head>
   <body>
-    <h1>Viewport-based selection - 2</h1>
-    <p>This image has a flexible height and width. In total 3 different layouts are applied:</p>
+    <h1>Viewport-based selection</h1>
+    <h2>Example 2</h2>
+    <p>The image has a flexible height and width. In total 3 different layouts are applied:</p>
     <ol>
       <li><b>Layout 1: Narrow</b><br>Viewport width &lt; <code>25rem</code>), image takes the full width (<code>100vw</code>) of the available screen</li>
       <li><b>Layout 2: Medium</b><br>Viewport width &lt; <code>50rem</code>), image takes half the width (<code>50vw</code>) of the available screen</li>
-      <li><b>Layout 3: Wide</b><br>Viewport width &lt; <code>33vw</code> is calculated by the browser, image takes roughly &frac13; of the the available screen.</li>
+      <li><b>Layout 3: Wide</b><br>Viewport width &gt; <code>50rem</code>, image takes roughly &frac13; (<code>33vw</code>) of the the available screen.</li>
     </ol>
-    <p>The available screen includes document margins. Document margings have been set to <code>0</code> in this example to prevent horizontal scrolling.</p>
+    <p>The browser picks a width from the <code>sizes</code> attribute, using the first item with a so called &lt;media-condition&gt; (in parentheses) that evaluates to true, or uses the last item <code>33vw</code> if all previous &lt;media-condition&gt; evaluate to false.</p>
+    <p>The <i>available screen</i> includes document margins. Document margings have been set to <code>0</code> in this example to prevent horizontal scrolling.</p>
     <p>Browsers calculate the effective pixel density of each image by using the <code>srcset</code>'s <code>w</code>-descriptors.</p>
     <hr>
     <img 
