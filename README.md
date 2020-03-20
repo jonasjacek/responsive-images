@@ -13,6 +13,7 @@
     * [Example 1](#example-1)
   * [Viewport-based selection](#viewport-based-selection)
     * [Example 1](#example-1-1)
+    * [Example 2](#example-2)
   * [Art direction-based selection](#art-direction-based-selection)
 * [Responsive images in CSS](#responsive-images-in-css)
 * [Documentation](#documentation)
@@ -86,6 +87,23 @@ The images only vary in their size (image content is identical).
 ```
 
 **See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/viewport-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/viewport-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/viewport-based-selection_1.html) (gitlab.com)
+
+
+#### Example 2
+
+```html
+<img 
+  alt="bullseye"
+  sizes="(max-width: 25rem) 100vw, (max-width: 50rem) 50vw, 33vw"
+  srcset="
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg 200w, 
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 400w, 
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_800/circle_0_saqntd.jpg 800w"
+  src="
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg">
+```
+
+**See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/viewport-based-selection_2.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/viewport-based-selection_2.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/viewport-based-selection_2.html) (gitlab.com)
 
 Fallback: Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
