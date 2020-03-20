@@ -10,11 +10,12 @@
 
 * [Responsive images in HTML](#responsive-images-in-html)
   * [Device-pixel-ratio-based selection](#device-pixel-ratio-based-selection)
+    * [Examples](#examples)
   * [Viewport-based selection](#viewport-based-selection)
   * [Art direction-based selection](#art-direction-based-selection)
 * [Responsive images in CSS](#responsive-images-in-css)
 * [Terminologies](#terminologies)
-* [Examples](#examples)
+* [Examples](#examples-1)
 * [Documentation](#documentation)
   * [Introduction](#introduction)
   * [Prerequisites](#prerequisites)
@@ -33,9 +34,7 @@
 
 ## Responsive images in HTML
 
-Responsive images in HTML are a method for providing the browser with multiple image sources for an image slot. The browser selects an image, depending on display density, size of the image element in the page, or any number of other factors. 
-
-The following selection methods are available:
+Responsive images in HTML are a method for providing the browser with multiple image sources for an image slot. The browser selects an image, depending on display density, size of the image element in the page, or any number of other factors. The following selection methods are available:
 
 
 ### Device-pixel-ratio-based selection
@@ -44,9 +43,28 @@ The following selection methods are available:
 
 The `img` element's `sizes` and `srcset` attributes are used in conjunction with the `x` descriptor.
 
-Use this selection method if the rendered size of the image is fixed (e.g. by `height` and `width` attributes on the `img` element. The images in `srcset` only vary in their intrinsic width to support different resolutions (image content is identical).
+Use this selection method if the rendered size of the image is fixed (e.g. by `height` and `width` attributes on the `img` element. The images in `srcset` only vary in their intrinsic width to support different resolutions (image content is identical). This allows for sharp images on high resolution screens.
 
-Browsers which do not support the `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
+```html
+<img 
+  src="
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png"
+  srcset="
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_150/circle_0_oqxmu3.png 1.5x, 
+    https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 2x"
+  alt="#" 
+  width="100" 
+  height="100"
+>
+```
+
+Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
+
+#### Examples
+
+* Example 1  
+  Rendered: https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html
+  Source: https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/device-pixel-ratio-based-selection_1.html
 
 
 ### Viewport-based selection
@@ -57,7 +75,7 @@ The `img` element's `sizes` and `srcset` attributes are used in conjunction with
 
 The images only vary in their size (image content is identical).
 
-Browsers which do not support the `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
+Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
 
 ### Art direction-based selection
@@ -68,7 +86,7 @@ The `picture` elements `source` element's `media` and `srcset` attributes refere
 
 The images may not only vary in their size but also image content may not be identical.
 
-Browsers which do not support the `picture` and `source` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
+Browsers which do not support `picture` and `source` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
 
 
 ## Responsive images in CSS
