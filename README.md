@@ -8,16 +8,15 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [Introduction](#introduction)
-  * [Responsive images in HTML](#responsive-images-in-html)
-    * [Device-pixel-ratio-based selection](#device-pixel-ratio-based-selection)
-    * [Viewport-based selection](#viewport-based-selection)
-    * [Art direction-based selection](#art-direction-based-selection)
-  * [Responsive images in CSS](#responsive-images-in-css)
+* [Responsive images in HTML](#responsive-images-in-html)
+  * [Device-pixel-ratio-based selection](#device-pixel-ratio-based-selection)
+  * [Viewport-based selection](#viewport-based-selection)
+  * [Art direction-based selection](#art-direction-based-selection)
+* [Responsive images in CSS](#responsive-images-in-css)
 * [Terminologies](#terminologies)
 * [Examples](#examples)
 * [Documentation](#documentation)
-  * [Introduction](#introduction-1)
+  * [Introduction](#introduction)
   * [Prerequisites](#prerequisites)
   * [Web Standards](#web-standards)
   * [Browser Support](#browser-support)
@@ -32,19 +31,16 @@
 
 ---
 
-## Introduction
-
-
-### Responsive images in HTML
+## Responsive images in HTML
 
 Responsive images in HTML are a method for providing the browser with multiple image sources for an image slot. The browser selects an image, depending on display density, size of the image element in the page, or any number of other factors. 
 
 The following selection methods are available:
 
 
-#### Device-pixel-ratio-based selection
+### Device-pixel-ratio-based selection
 
-**Resolution switching for displaying an image with a fixed size while supporting different screen resolutions.**
+Resolution switching for displaying an image with a fixed size while supporting different screen resolutions.
 
 The `img` element's `sizes` and `srcset` attributes are used in conjunction with the `x` descriptor.
 
@@ -53,9 +49,9 @@ Use this selection method if the rendered size of the image is fixed (e.g. by `h
 Browsers which do not support the `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
 
-#### Viewport-based selection
+### Viewport-based selection
 
-**Resolution switching for displaying different sizes of an image.**
+Resolution switching for displaying different sizes of an image.
 
 The `img` element's `sizes` and `srcset` attributes are used in conjunction with the `w` descriptor. 
 
@@ -64,9 +60,9 @@ The images only vary in their size (image content is identical).
 Browsers which do not support the `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
 
-#### Art direction-based selection
+### Art direction-based selection
 
-**Resolution switching for displaying different image sizes and contents.**
+Resolution switching for displaying different image sizes and contents.
 
 The `picture` wrapper element wraps different `source` elements whose `media` and `srcset` attributes are used to provide different sources for images for the browser to choose from. 
 
@@ -75,12 +71,14 @@ The images may not only vary in their size but also image content may not be ide
 Browsers which do not support the `picture` and `source` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
 
 
-### Responsive images in CSS
+## Responsive images in CSS
 
 Responsive images in CSS can be implemented with the help of media queries (`@media`). The browser picks the image that matches the media query.
 
 Browsers which do not support `@media` will ignore the rules.
 
+
+---
 
 ## Terminologies
 
@@ -137,6 +135,7 @@ Web Standards that relate to responsive images on the Web:
 ### Browser Support
 
 * https://caniuse.com/css-mediaqueries
+* https://caniuse.com/picture
 * https://caniuse.com/srcset
 
 ### Cloudinary
