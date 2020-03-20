@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Viewport-based selection - 1</title>
+    <title>Viewport-based selection - 2</title>
     <meta name="viewport" content="width=device-width">
     <style>
       body {
@@ -17,6 +17,9 @@
       p {
         margin: 1em .5rem; 
         }
+      li {
+        line-height: 1.4rem;
+      }
       hr {
         background-color: black;
         border: none;
@@ -26,13 +29,19 @@
     </style>
   </head>
   <body>
-    <h1>Viewport-based selection - 1</h1>
-    <p>This image has a flexible height and width and takes the width of the available screen incl. document margins (set to <code>0</code> in this example) to prevent horizontal scrolling.</p>
+    <h1>Viewport-based selection - 2</h1>
+    <p>This image has a flexible height and width. In total 3 different layouts are applied:</p>
+    <ol>
+      <li><b>Layout 1: Narrow</b><br>Viewport width &lt; <code>25rem</code>), image takes the full width (<code>100vw</code>) of the available screen</li>
+      <li><b>Layout 2: Medium</b><br>Viewport width &lt; <code>50rem</code>), image takes half the width (<code>50vw</code>) of the available screen</li>
+      <li><b>Layout 3: Wide</b><br>Viewport width &lt; <code>33vw</code> is calculated by the browser, image takes roughly &frac13; of the the available screen.</li>
+    </ol>
+    <p>The available screen includes document margins. Document margings have been set to <code>0</code> in this example to prevent horizontal scrolling.</p>
     <p>Browsers calculate the effective pixel density of each image by using the <code>srcset</code>'s <code>w</code>-descriptors.</p>
     <hr>
     <img 
       alt="bullseye"
-      sizes="100vw" 
+      sizes="(max-width: 25rem) 100vw, (max-width: 50rem) 50vw, 33vw"
       srcset="
         https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg 200w, 
         https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 400w, 
