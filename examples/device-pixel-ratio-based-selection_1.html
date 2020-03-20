@@ -21,18 +21,15 @@ hr {
   </head>
   <body>
     <h1>Device-pixel-ratio-based selection - 1</h1>
-    <p>This image has a fixed height and width but supports multiple display resolutions (1, 1.5, 2). Browsers choose the appropriate resolution image, depending on the screen's pixel density, by using <code>srcset</code> with <code>x</code>-descriptors.</p>
+    <p>This image has a fixed height and width but supports multiple display resolutions (<code>1</code>, <code>1.5</code>, <code>2</code>). Browsers choose the appropriate resolution image, depending on the screen's pixel density, by using <code>srcset</code> with <code>x</code>-descriptors.</p>
     <hr>
     <img 
+      alt="bullseye" height="100" width="100"
       src="
         https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png"
       srcset="
         https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_150/circle_0_oqxmu3.png 1.5x, 
-        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 2x"
-      alt="#" 
-      width="100" 
-      height="100">
-
+        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 2x">
     <hr>
   </body>
 </html>
