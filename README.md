@@ -6,7 +6,29 @@
 
 ## Table of contents
 
-[[_TOC_]]
+<!-- vim-markdown-toc GFM -->
+
+* [Introduction](#introduction)
+  * [Responsive images in HTML](#responsive-images-in-html)
+    * [Device-pixel-ratio-based selection](#device-pixel-ratio-based-selection)
+    * [Viewport-based selection](#viewport-based-selection)
+    * [Art direction-based selection](#art-direction-based-selection)
+  * [Responsive images in CSS](#responsive-images-in-css)
+* [Terminologies](#terminologies)
+* [Examples](#examples)
+* [Documentation](#documentation)
+  * [Introduction](#introduction-1)
+  * [Prerequisites](#prerequisites)
+  * [Web Standards](#web-standards)
+  * [Browser Support](#browser-support)
+  * [Cloudinary](#cloudinary)
+  * [General](#general)
+* [Mirrors](#mirrors)
+* [Warranty and Liability](#warranty-and-liability)
+* [Licenses](#licenses)
+* [Contribute](#contribute)
+
+<!-- vim-markdown-toc -->
 
 ---
 
