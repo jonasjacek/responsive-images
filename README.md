@@ -2,20 +2,62 @@
 
 **Information, resources and sample implementations of responsive images in HTML and CSS in conjunction with [Cloudinary](https://cloudinary.com/) for art direction.**
 
+---
+
+## Table of contents
+
+[[_TOC_]]
+
+---
 
 ## Introduction
 
+
 ### Responsive images in HTML
 
-Responsive images in HTML are a method for providing the browser with multiple image sources in the `img` element's `srcset` attribute. The browser picks an image, depending on display density, size of the image element in the page, or any number of other factors.
+Responsive images in HTML are a method for providing the browser with multiple image sources for an image slot. The browser selects an image, depending on display density, size of the image element in the page, or any number of other factors. 
 
-Browsers which do not support the `srcset` attribute will ignore it and load the image referenced in the `src` attribute. Browser support can be looked up at [https://caniuse.com/srcset](https://caniuse.com/srcset).
+The following selection methods are available:
+
+
+#### Device-pixel-ratio-based selection
+
+**Resolution switching for displaying an image with a fixed size while supporting different screen resolutions.**
+
+The `img` element's `sizes` and `srcset` attributes are used in conjunction with the `x` descriptor.
+
+Use this selection method if the rendered size of the image is fixed (e.g. by `height` and `width` attributes on the `img` element. The images in `srcset` only vary in their intrinsic width to support different resolutions (image content is identical).
+
+Browsers which do not support the `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
+
+
+#### Viewport-based selection
+
+**Resolution switching for displaying different sizes of an image.**
+
+The `img` element's `sizes` and `srcset` attributes are used in conjunction with the `w` descriptor. 
+
+The images only vary in their size (image content is identical).
+
+Browsers which do not support the `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
+
+
+#### Art direction-based selection
+
+**Resolution switching for displaying different image sizes and contents.**
+
+The `picture` wrapper element wraps different `source` elements whose `media` and `srcset` attributes are used to provide different sources for images for the browser to choose from. 
+
+The images may not only vary in their size but also image content may not be identical.
+
+Browsers which do not support the `picture` and `source` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
+
 
 ### Responsive images in CSS
 
 Responsive images in CSS can be implemented with the help of media queries (`@media`). The browser picks the image that matches the media query.
 
-Browsers which do not support `@media` will ignore the rules. Browser support for `@media` can be looked up at [https://caniuse.com/css-mediaqueries](https://caniuse.com/css-mediaqueries).
+Browsers which do not support `@media` will ignore the rules.
 
 
 ## Terminologies
@@ -70,6 +112,11 @@ Web Standards that relate to responsive images on the Web:
 * https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element
 * https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element
 
+### Browser Support
+
+* https://caniuse.com/css-mediaqueries
+* https://caniuse.com/srcset
+
 ### Cloudinary
 
 Links to the Cloudinary documentation, which describe techniques used in this repository:
@@ -95,7 +142,7 @@ You can find this repository at:
 ## Warranty and Liability
 [Responsive Images](https://gitlab.com/jonasjacek/responsive-images) is a small, private project. The author makes absolutely no claims and representations to warranties regarding the accuracy or completeness of the information provided. However, you can use the information in this repository AT YOUR OWN RISK.
 
-## License
+## Licenses
 
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Responsive Images</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://gitlab.com/jonasjacek/responsive-images" property="cc:attributionName" rel="cc:attributionURL">Jonas Jacek</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Permissions beyond the scope of this license may be available upon <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.jonas.me/contact" rel="cc:morePermissions">request</a>.
 
