@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Viewport-based selection - 1</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: 12px;
+        margin: 0;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 2em .5rem;
+      }
+      p {
+        margin: 1em .5rem; 
+        }
+      hr {
+        background-color: black;
+        border: none;
+        height: 1px;
+        margin: 2em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Device-pixel-ratio-based selection - 1</h1>
+    <p>This image has a flexible height and width and takes the width of the available screen incl. document margins (set to <code>0</code> in this example).</p>
+    <p>Browsers calculate the effective pixel density of each image by using the <code>srcset</code>'s <code>w</code>-descriptors.</p>
+    <hr>
+    <img 
+      alt="bullseye"
+      sizes="100vw" 
+      srcset="
+        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg 200w, 
+        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 400w, 
+        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_800/circle_0_saqntd.jpg 800w"
+      src="
+      https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg">
+    <hr>
+  </body>
+</html>

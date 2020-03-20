@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <title>Device-pixel-ratio-based selection - 1</title>
     <meta name="viewport" content="width=device-width">
     <style>
-body {
-  font-family: sans-serif;
-  font-size: 12px;
-}
-h1 {
-  font-size: 20px;
-}
-hr {
-  background-color: black;
-  border: none;
-  height: 1px;
-  margin: 2em 0;
-}
+      body {
+        font-family: sans-serif;
+        font-size: 12px;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 2em 0;
+      }
+      p {
+        margin: 1em 0; 
+        }
+      hr {
+        background-color: black;
+        border: none;
+        height: 1px;
+        margin: 2em 0;
+      }
     </style>
   </head>
   <body>
     <h1>Device-pixel-ratio-based selection - 1</h1>
-    <p>This image has a fixed height and width but supports multiple display resolutions (<code>1</code>, <code>1.5</code>, <code>2</code>). Browsers choose the appropriate resolution image, depending on the screen's pixel density, by using <code>srcset</code> with <code>x</code>-descriptors.</p>
+    <p>This image has a fixed height and width but supports multiple display resolutions (<code>1</code>, <code>1.5</code>, <code>2</code>).</p>
+    <p>Browsers choose the appropriate resolution image, depending on the screen's pixel density, by using <code>srcset</code> with <code>x</code>-descriptors.</p>
     <hr>
     <img 
-      alt="bullseye" height="100" width="100"
+      alt="bullseye" height="200" width="200"
       src="
-        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png"
+        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg"
       srcset="
-        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_150/circle_0_oqxmu3.png 1.5x, 
-        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_oqxmu3.png 2x">
+        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_300/circle_0_saqntd.jpg 1.5x, 
+        https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 2x">
     <hr>
   </body>
 </html>
