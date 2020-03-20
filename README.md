@@ -8,11 +8,14 @@
 
 Responsive images in HTML are a method for providing the browser with multiple image sources in the `img` element's `srcset` attribute. The browser picks an image, depending on display density, size of the image element in the page, or any number of other factors.
 
+Browsers which do not support the `srcset` attribute will ignore it and load the image referenced in the `src` attribute. Browser support can be looked up at [https://caniuse.com/srcset](https://caniuse.com/srcset).
+
 ### Responsive images in CSS
 
-Responsive images in CSS can be implemented with the help of media queries (`@media` and `@import`).
+Responsive images in CSS can be implemented with the help of media queries (`@media`). The browser picks the image that matches the media query.
 
-Examples of different usages of responsive images can be found in `/examples`.
+Browsers which do not support `@media` will ignore the rules. Browser support for `@media` can be looked up at [https://caniuse.com/css-mediaqueries](https://caniuse.com/css-mediaqueries).
+
 
 ## Terminologies
 
@@ -34,6 +37,11 @@ Examples of different usages of responsive images can be found in `/examples`.
   All images in the `srcset` show the same thing but contain different numbers of pixels.
 * **Software pixel**  
   See _CSS pixel_.
+
+
+## Examples
+
+Examples of different usages of responsive images can be found in `/examples`.
 
 
 ## Documentation
