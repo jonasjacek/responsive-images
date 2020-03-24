@@ -19,8 +19,7 @@
 * [Responsive images in CSS](#responsive-images-in-css)
   * [Media query-based selection](#media-query-based-selection)
     * [Example 1](#example-1-3)
-  * [image-set()-based selection](#image-set-based-selection)
-    * [Example 1](#example-1-4)
+  * [Image-set-based selection](#image-set-based-selection)
 * [Documentation](#documentation)
   * [Introduction](#introduction)
   * [Prerequisites](#prerequisites)
@@ -219,15 +218,13 @@ The images may not only vary in their size but also image content may not be ide
 
 User agents (e.g. browsers) do not support `@media` will ignore the rules.
 
-### image-set()-based selection
+### Image-set-based selection
 
 **Resolution switching for displaying an image with a fixed size while supporting different screen resolutions.**
 
-#### Example 1
+Responsive images with the help of the CSS function notation (`image-set()`). The user agent (e.g. browser) picks the image that matches the media query and screen resolution.
 
-```css
-...
-```
+The `image-set()` is a working draft of [CSS Images Module Level 4](https://drafts.csswg.org/css-images-4/#image-set-notation).
 
 User agents (e.g. browsers) do not support `image-set()` will ignore the rules.
 
