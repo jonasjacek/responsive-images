@@ -136,7 +136,7 @@ The images may not only vary in their size but also image content may not be ide
 
 ```
 
-The rendered size (height and width) of the image varies depending on which of the 3 resources is chosen. Usind CSS to inform the user agent (e.g. browsers) about image dimensions, allows for faster rendering by eliminating the need for unnecessary repaints.
+The rendered size (height and width) of the image varies depending on which of the 3 resources is chosen. Use CSS to inform the user agent (e.g. browsers) about image dimensions, allows for faster rendering by eliminating the need for unnecessary repaints.
 
 ```css
 img { 
@@ -173,6 +173,36 @@ Fallback: Browsers which do not support `picture` and `source` elements will ign
 
 Responsive images in CSS can be implemented with the help of media queries (`@media`). The browser picks the image that matches the media query.
 
+```css
+/* Narrow screen*/
+@media only screen and (max-width: 25rem) {
+  .background {
+    background-image: url("https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_saqntd.jpg");
+    height: 100px;
+    width: 100px;
+  }
+}
+/* Medium screen*/
+@media only screen and (min-width: 25rem) and (max-width: 50rem) {
+  .background {
+    background-image: url("https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg");
+    height: 200px;
+    width: 200px;
+  }
+}
+/* Wide screen*/
+@media only screen and (min-width: 50rem) {
+  .background {
+    background-image: url(
+      "https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_250/circle_0_saqntd.jpg");
+    height: 250px;
+    width: 250px;
+  }
+}
+```
+
+**See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/css-media-query-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/css-media-query-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/css-media-query-based-selection_1.html) (gitlab.com)
+
 Browsers which do not support `@media` will ignore the rules.
 
 
@@ -206,9 +236,10 @@ Web Standards that relate to responsive images on the Web:
 
 ### Browser Support
 
-* https://caniuse.com/css-mediaqueries
 * https://caniuse.com/picture
 * https://caniuse.com/srcset
+* https://caniuse.com/css-mediaqueries
+* https://caniuse.com/css-image-set
 
 ### Cloudinary
 

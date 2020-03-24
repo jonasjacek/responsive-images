@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS media query-based selection - 1</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: 12px;
+      }
+      h1 {
+        font-size: 2.4em;
+        margin: 2rem 0;
+      }
+      h2 {
+        margin: 1.4rem 0;
+      }
+      p {
+        margin: 1em 0; 
+        }
+      hr {
+        background-color: black;
+        border: none;
+        height: 1px;
+        margin: 2em 0;
+      }
+      /* Narrow screen*/
+      @media only screen and (max-width: 25rem) {
+        .background {
+          background-image: url("https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_saqntd.jpg");
+          height: 100px;
+          width: 100px;
+        }
+      }
+      /* Medium screen*/
+      @media only screen and (min-width: 25rem) and (max-width: 50rem) {
+        .background {
+          background-image: url("https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg");
+          height: 200px;
+          width: 200px;
+        }
+      }
+      /* Wide screen*/
+      @media only screen and (min-width: 50rem) {
+        .background {
+          background-image: url(
+            "https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_250/circle_0_saqntd.jpg");
+          height: 250px;
+          width: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS media query-based selection - 1</h1>
+    <h2>Example 1</h2>
+    <p>The image has a flexible height and width. In total, 3 different layouts are applied:</p>
+    <ol>
+      <li><b>Breakpoint 1: Narrow</b><br>Viewport width &lt; <code>25rem</code>), image width is <code>100px</code><sup>*</sup>.</li>
+      <li><b>Breakpoint 2: Medium</b><br>Viewport width &lt; <code>50rem</code>), image width is <code>200px</code><sup>*</sup>.</li>
+      <li><b>Breakpoint 3: Wide</b><br>Viewport width &gt; <code>50rem</code> image width is <code>300px</code><sup>*</sup>.</li>
+    </ol>
+    <small>*<code>px</code> refers to CSS pixels.</small>
+    <p>User agents (e.g. browsers) cannot choose the appropriate resolution image, depending on the screen's pixel density, only one source per media query is provided.</p>
+    <hr>
+    <section class="background">
+
+    </section>
+    <hr>
+  </body>
+</html>
