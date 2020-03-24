@@ -40,9 +40,9 @@
       <li><b>Layout 2: Medium</b><br>Viewport width &lt; <code>50rem</code>), image takes half the width (<code>50vw</code>) of the available screen</li>
       <li><b>Layout 3: Wide</b><br>Viewport width &gt; <code>50rem</code>, image takes roughly &frac13; (<code>33vw</code>) of the the available screen.</li>
     </ol>
-    <p>The browser picks a width from the <code>sizes</code> attribute, using the first item with a so called &lt;media-condition&gt; (in parentheses) that evaluates to true, or uses the last item <code>33vw</code> if all previous &lt;media-condition&gt; evaluate to false.</p>
+    <p>The user agent (e.g. browser) picks a width from the <code>sizes</code> attribute, using the first item with a so called &lt;media-condition&gt; (in parentheses) that evaluates to true, or uses the last item <code>33vw</code> if all previous &lt;media-condition&gt; evaluate to false.</p>
     <p>The <i>available screen</i> includes document margins. Document margings have been set to <code>0</code> in this example to prevent horizontal scrolling.</p>
-    <p>Browsers calculate the effective pixel density of each image by using the <code>srcset</code>'s <code>w</code>-descriptors.</p>
+    <p>User agents (e.g. browsers) calculate the effective pixel density of each image by using the <code>srcset</code>'s <code>w</code>-descriptors.</p>
     <hr>
     <img 
       alt="bullseye"
