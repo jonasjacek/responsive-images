@@ -17,6 +17,10 @@
   * [Art direction-based selection](#art-direction-based-selection)
     * [Example 1](#example-1-2)
 * [Responsive images in CSS](#responsive-images-in-css)
+  * [Media query-based selection](#media-query-based-selection)
+    * [Example 1](#example-1-3)
+  * [image-set()-based selection](#image-set-based-selection)
+    * [Example 1](#example-1-4)
 * [Documentation](#documentation)
   * [Introduction](#introduction)
   * [Prerequisites](#prerequisites)
@@ -36,7 +40,7 @@
 
 ## Responsive images in HTML
 
-Responsive images in HTML are a method for providing the browser with multiple image sources for an image slot. The browser selects an image, depending on display density, size of the image element in the page, or any number of other factors. The following selection methods are available:
+Responsive images in HTML are a method for providing the browser with multiple image sources for an image slot. The user agent (e.g. browser) selects an image, depending on display density, size of the image element in the page, or any number of other factors. The following selection methods are available:
 
 
 ### Device-pixel-ratio-based selection
@@ -61,7 +65,7 @@ Use this selection method if the rendered size of the image is fixed (e.g. by `h
 
 **See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/device-pixel-ratio-based-selection_1.html) (gitlab.com)
 
-Fallback: Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
+Fallback: User agents (e.g. browsers) do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
 
 
@@ -106,7 +110,7 @@ The images only vary in their size (image content is identical).
 
 **See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/viewport-based-selection_2.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/viewport-based-selection_2.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/viewport-based-selection_2.html) (gitlab.com)
 
-Fallback: Browsers which do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
+Fallback: User agents (e.g. browsers) do not support `sizes` and `srcset` attributes will ignore them and load the image referenced in the `src` attribute.
 
 
 ### Art direction-based selection
@@ -166,12 +170,22 @@ img {
 
 **See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/art-direction-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/art-direction-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/art-direction-based-selection_1.html) (gitlab.com)
 
-Fallback: Browsers which do not support `picture` and `source` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
+Fallback: User agents (e.g. browsers) do not support `picture` and `source` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
 
 
 ## Responsive images in CSS
 
-Responsive images in CSS can be implemented with the help of media queries (`@media`). The browser picks the image that matches the media query.
+Responsive images in CSS are a method for providing the browser with multiple image sources for an image slot. In some cases, the user agent (e.g. browser) selects an image, depending on display density, size of the image element in the page, or any number of other factors. The following selection methods are available:
+
+### Media query-based selection
+
+**Resolution switching for displaying different image sizes and contents.**
+
+Responsive images with the help of media queries (`@media`). The user agent (e.g. browser) picks the image that matches the media query. The user agent cannot chose from a set of sources to support different screen resolutions.
+
+The images may not only vary in their size but also image content may not be identical.
+
+#### Example 1
 
 ```css
 /* Narrow screen*/
@@ -203,8 +217,19 @@ Responsive images in CSS can be implemented with the help of media queries (`@me
 
 **See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/css-media-query-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/css-media-query-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/css-media-query-based-selection_1.html) (gitlab.com)
 
-Browsers which do not support `@media` will ignore the rules.
+User agents (e.g. browsers) do not support `@media` will ignore the rules.
 
+### image-set()-based selection
+
+**Resolution switching for displaying an image with a fixed size while supporting different screen resolutions.**
+
+#### Example 1
+
+```css
+...
+```
+
+User agents (e.g. browsers) do not support `image-set()` will ignore the rules.
 
 ---
 
