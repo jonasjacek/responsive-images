@@ -123,7 +123,7 @@ The images may not only vary in their size but also image content may not be ide
 <picture>
   <source 
     media="(max-width: 25rem)" 
-    srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_saqntd.jpg">
+    srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png">
   <source
     media="(max-width: 50rem)"
     srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg">
@@ -157,6 +157,7 @@ img {
 }
 @media (max-width: 25rem) { 
   img { 
+    background-color: red;
     height: 100px;
     width: 100px; 
   } 

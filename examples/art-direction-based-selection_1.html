@@ -43,6 +43,7 @@ body {
       }
       @media (max-width: 25rem) { 
         img { 
+          background-color: red;
           height: 100px;
           width: 100px; 
         } 
@@ -51,7 +52,7 @@ body {
   </head>
   <body>
     <h1>Art direction-based selection</h1>
-    <p>This image has a flexible height and width. In total, 3 different breakpoints are applied:</p>
+    <p>This picture has different heights and widths. It even consists of 2 different images (two bulleyes with a background photo, one transparent bullseye with a red background color). In total, 3 different breakpoints are applied:</p>
     <ol>
       <li><b>Breakpoint 1: Narrow</b><br>Viewport width &lt; <code>25rem</code>), image width is <code>100px</code><sup>*</sup>.</li>
       <li><b>Breakpoint 2: Medium</b><br>Viewport width &lt; <code>50rem</code>), image width is <code>200px</code><sup>*</sup>.</li>
@@ -64,7 +65,7 @@ body {
     <picture>
       <source 
         media="(max-width: 25rem)" 
-        srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_saqntd.jpg">
+        srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_oqxmu3.png">
         <source
           media="(max-width: 50rem)"
           srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg">
