@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Art direction-based selection</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+body {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+      h1 {
+        font-size: 20px;
+        margin: 2em 0;
+      }
+      p {
+        margin: 1em 0; 
+      }
+      li {
+        line-height: 1.4rem;
+      }
+      hr {
+        background-color: black;
+        border: none;
+        height: 1px;
+        margin: 2em 0;
+      }
+      img { 
+        width: 300px; 
+        height: 300px; 
+      }
+      @media (min-width: 50rem) {
+        img { 
+          height: 300px; 
+          width: 300px; 
+        } 
+      }
+      @media (max-width: 50rem) {
+        img { 
+          height: 200px; 
+          width: 200px; 
+        } 
+      }
+      @media (max-width: 25rem) { 
+        img { 
+          height: 100px;
+          width: 100px; 
+        } 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Art direction-based selection</h1>
+    <p>This image has a flexible height and width. In total, 3 different breakpoints are applied:</p>
+    <ol>
+      <li><b>Breakpoint 1: Narrow</b><br>Viewport width &lt; <code>25rem</code>), image width is <code>100px</code><sup>*</sup>.</li>
+      <li><b>Breakpoint 2: Medium</b><br>Viewport width &lt; <code>50rem</code>), image width is <code>200px</code><sup>*</sup>.</li>
+      <li><b>Breakpoint 3: Wide</b><br>Viewport width &gt; <code>50rem</code> image width is <code>300px</code><sup>*</sup>.</li>
+    </ol>
+    <small>*<code>px</code> refers to CSS pixels.</small>
+    <h2>Using CSS</h2>
+    <p>The rendered size (height and width) of the image varies depending on which of the 3 resources is chosen. Usind CSS to inform the user agent (e.g. browsers) about image dimensions, allows for faster rendering by eliminating the need for unnecessary repaints.</p>
+    <hr>
+    <picture>
+      <source 
+        media="(max-width: 25rem)" 
+        srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_saqntd.jpg">
+        <source
+          media="(max-width: 50rem)"
+          srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg">
+          <source
+            media="(min-width: 50rem)"
+            srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_300/circle_0_saqntd.jpg">
+            <img src="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_300/circle_0_saqntd.jpg" alt="bullseye">
+    </picture>
+    <hr>
+  </body>
+</html>

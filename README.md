@@ -15,6 +15,7 @@
     * [Example 1](#example-1-1)
     * [Example 2](#example-2)
   * [Art direction-based selection](#art-direction-based-selection)
+    * [Example 1](#example-1-2)
 * [Responsive images in CSS](#responsive-images-in-css)
 * [Documentation](#documentation)
   * [Introduction](#introduction)
@@ -115,6 +116,54 @@ Fallback: Browsers which do not support `sizes` and `srcset` attributes will ign
 The `picture` elements `source` element's `media` and `srcset` attributes reference different image sources for the browser to choose from. 
 
 The images may not only vary in their size but also image content may not be identical.
+
+#### Example 1
+
+```html
+<picture>
+  <source 
+    media="(max-width: 25rem)" 
+    srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_100/circle_0_saqntd.jpg">
+  <source
+    media="(max-width: 50rem)"
+    srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg">
+  <source
+    media="(min-width: 50rem)"
+    srcset="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_300/circle_0_saqntd.jpg">
+
+  <img src="https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_300/circle_0_saqntd.jpg" alt="bullseye">
+</picture>
+
+```
+
+The rendered size (height and width) of the image varies depending on which of the 3 resources is chosen. Usind CSS to inform the user agent (e.g. browsers) about image dimensions, allows for faster rendering by eliminating the need for unnecessary repaints.
+
+```css
+img { 
+  width: 300px; 
+  height: 300px; 
+}
+@media (min-width: 50rem) {
+  img { 
+    height: 300px; 
+    width: 300px; 
+  } 
+}
+@media (max-width: 50rem) {
+  img { 
+    height: 200px; 
+    width: 200px; 
+  } 
+}
+@media (max-width: 25rem) { 
+  img { 
+    height: 100px;
+    width: 100px; 
+  } 
+}
+```
+
+**See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/art-direction-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/art-direction-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/art-direction-based-selection_1.html) (gitlab.com)
 
 Fallback: Browsers which do not support `picture` and `source` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
 
