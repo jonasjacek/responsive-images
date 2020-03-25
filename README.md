@@ -299,6 +299,7 @@ Web Standards that relate to responsive images on the Web:
 
 Links to the Cloudinary documentation, which describe techniques used in this repository:
 
+* https://cloudinary.com/documentation/responsive_images
 * https://cloudinary.com/documentation/image_transformations
 * https://cloudinary.com/documentation/image_transformation_reference#crop_parameter
 
