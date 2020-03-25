@@ -16,6 +16,7 @@
     * [Example 2](#example-2)
   * [Art direction-based selection](#art-direction-based-selection)
     * [Example 1](#example-1-2)
+  * [Device-pixel-ratio and art-direction-based selection](#device-pixel-ratio-and-art-direction-based-selection)
 * [Responsive images in CSS](#responsive-images-in-css)
   * [Media query-based selection](#media-query-based-selection)
     * [Example 1](#example-1-3)
@@ -170,6 +171,37 @@ img {
 **See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/art-direction-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/art-direction-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/art-direction-based-selection_1.html) (gitlab.com)
 
 Fallback: User agents which do not support `picture` and `source` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
+
+
+
+### Device-pixel-ratio and art-direction-based selection
+
+**Resolution switching for displaying different image sizes and contents.**
+
+Combination of two selection methods. It uses the `source` and `img` element's `srcset` attribute with the `x` descriptor. The images in `srcset` vary in their intrinsic width to support different resolutions (image content is identical). This allows for sharp images on high resolution screens.
+
+```html
+<picture>
+  <source 
+    media="
+      (max-width: 50rem)" 
+    srcset="
+      https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpeg,
+      https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_300/circle_0_saqntd.jpg 1.5x, 
+      https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 2x">
+  <img 
+    src="
+      https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg" 
+    srcset="
+      https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_300/circle_0_saqntd.jpg 1.5x, 
+      https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 2x"
+    alt="bullseye">
+ </picture>
+```
+
+**See this example:** [Rendered](https://htmlpreview.github.io/?https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-&-art-direction-based-selection_1.html) (github.io), [Source](https://github.com/jonasjacek/responsive-images/blob/master/examples/device-pixel-ratio-&-art-direction-based-selection_1.html) (github.com), [Source](https://gitlab.com/jonasjacek/responsive-images/-/blob/master/examples/device-pixel-ratio-&-art-direction-based-selection_1.html) (gitlab.com)
+
+Fallback: User agents which do not support `picture`, `source`, and `srcset` elements will ignore them and load the image referenced in the `img` elements `src` attribute.
 
 
 ## Responsive images in CSS

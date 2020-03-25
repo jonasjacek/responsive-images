@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Device-pixel-ratio and Art direction-based selection - 1</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: 12px;
+      }
+      h1 {
+        font-size: 2.4em;
+        margin: 2rem 0;
+      }
+      h2 {
+        margin: 1.4rem 0;
+      }
+      p {
+        margin: 1em 0; 
+        }
+      hr {
+        background-color: black;
+        border: none;
+        height: 1px;
+        margin: 2em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Device-pixel-ratio and Art direction-based selection - 1</h1>
+    <h2>Example 1</h2>
+    <p>The image has a fixed height and width but supports multiple display resolutions (<code>1</code>, <code>1.5</code>, <code>2</code>).</p>
+    <p>User agents (e.g. browsers) choose the appropriate resolution image, depending on the screen's pixel density, by using <code>srcset</code> with <code>x</code>-descriptors.</p>
+    <hr>
+    <picture>
+      <source 
+        media="
+          (max-width: 50rem)" 
+        srcset="
+          https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpeg,
+          https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_300/circle_0_saqntd.jpg 1.5x, 
+          https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 2x">
+      <img 
+        src="
+          https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_200/circle_0_saqntd.jpg" 
+        srcset="
+          https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_300/circle_0_saqntd.jpg 1.5x, 
+          https://res.cloudinary.com/responsive-images/image/upload/c_scale,f_auto,w_400/circle_0_saqntd.jpg 2x"
+        alt="bullseye">
+     </picture>
+    <hr>
+  </body>
+</html>
